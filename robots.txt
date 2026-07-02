@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://itjobs2026.netlify.app/sitemap.xml
