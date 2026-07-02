@@ -1,0 +1,464 @@
+/* ============================================
+   Job Opportunity 2026 — Design System
+   Palette: Ink Navy / Signal Amber / Paper
+   Type: Space Grotesk (display) + Inter (body)
+   ============================================ */
+
+:root {
+  --ink: #0F1B2D;
+  --ink-soft: #1C2E47;
+  --paper: #F7F5F0;
+  --paper-dim: #ECE8DE;
+  --amber: #F5A623;
+  --amber-deep: #D6870C;
+  --teal: #1E8A7A;
+  --line: #D9D4C7;
+  --text-dim: #5B6472;
+  --white: #FFFFFF;
+  --radius: 10px;
+  --shadow-card: 0 2px 10px rgba(15, 27, 45, 0.06);
+  --shadow-card-hover: 0 10px 28px rgba(15, 27, 45, 0.14);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .display {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ---------- Navbar ---------- */
+.navbar-2026 {
+  background: var(--ink);
+  padding: 0.7rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.15);
+}
+
+.navbar-2026 .navbar-brand {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--white) !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-2026 .navbar-brand .badge-year {
+  background: var(--amber);
+  color: var(--ink);
+  font-size: 0.65rem;
+  padding: 2px 7px;
+  border-radius: 20px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.navbar-2026 .nav-link {
+  color: rgba(255,255,255,0.78) !important;
+  font-weight: 500;
+  font-size: 0.92rem;
+  padding: 0.5rem 0.85rem !important;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.navbar-2026 .nav-link:hover,
+.navbar-2026 .nav-link.active {
+  color: var(--white) !important;
+  background: rgba(245,166,35,0.14);
+}
+
+.navbar-2026 .nav-link.active {
+  color: var(--amber) !important;
+}
+
+.navbar-toggler { border: none; }
+.navbar-toggler:focus { box-shadow: none; }
+.navbar-toggler .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(160deg, var(--ink) 0%, var(--ink-soft) 100%);
+  color: var(--white);
+  padding: 4.5rem 0 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  top: -80px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245,166,35,0.18), transparent 70%);
+}
+
+.hero .eyebrow {
+  color: var(--amber);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.hero h1 {
+  color: var(--white);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.08;
+  margin: 0.6rem 0 1rem;
+}
+
+.hero p.lead {
+  color: rgba(255,255,255,0.75);
+  font-size: 1.1rem;
+  max-width: 620px;
+}
+
+/* ---------- Search Bar ---------- */
+.search-panel {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.1rem;
+  box-shadow: var(--shadow-card-hover);
+  margin-top: 1.5rem;
+}
+
+.search-panel .form-control,
+.search-panel .form-select {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.92rem;
+}
+
+.search-panel .form-control:focus,
+.search-panel .form-select:focus {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px rgba(245,166,35,0.18);
+}
+
+.btn-amber {
+  background: var(--amber);
+  border: none;
+  color: var(--ink);
+  font-weight: 600;
+  padding: 0.6rem 1.3rem;
+  border-radius: 7px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn-amber:hover {
+  background: var(--amber-deep);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+.btn-outline-ink {
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  font-weight: 600;
+  border-radius: 7px;
+  padding: 0.55rem 1.2rem;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+.btn-outline-ink:hover {
+  background: var(--ink);
+  color: var(--white);
+}
+
+/* ---------- Section headers ---------- */
+.section-pad { padding: 3.2rem 0; }
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+}
+
+.section-head .eyebrow {
+  color: var(--teal);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.section-head h2 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  margin: 0;
+}
+
+/* ---------- Job Card ---------- */
+.job-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.3rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--amber);
+}
+
+.job-card .job-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0.9rem;
+}
+
+.company-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  background: var(--paper-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ink-soft);
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+}
+
+.job-card h5 {
+  font-size: 1.02rem;
+  margin: 0 0 2px;
+  line-height: 1.25;
+}
+
+.job-card .company-name {
+  font-size: 0.86rem;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.job-meta .tag {
+  font-size: 0.72rem;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: var(--paper-dim);
+  color: var(--ink-soft);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.job-meta .tag.exp { background: rgba(30,138,122,0.12); color: var(--teal); }
+.job-meta .tag.type { background: rgba(245,166,35,0.15); color: var(--amber-deep); }
+
+.job-desc {
+  font-size: 0.86rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+  flex-grow: 1;
+}
+
+.job-skills {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.9rem;
+}
+.job-skills strong { color: var(--ink); }
+
+.job-salary {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--teal);
+  margin-bottom: 0.8rem;
+}
+
+.job-card .apply-btn {
+  display: block;
+  text-align: center;
+  background: var(--ink);
+  color: var(--white);
+  padding: 0.55rem;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: background 0.2s ease;
+  margin-top: auto;
+}
+.job-card .apply-btn:hover {
+  background: var(--amber-deep);
+  color: var(--white);
+}
+
+/* ---------- Filter bar (listing pages) ---------- */
+.filter-bar {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1.8rem;
+  position: sticky;
+  top: 68px;
+  z-index: 90;
+  box-shadow: var(--shadow-card);
+}
+
+.result-count {
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+.result-count strong { color: var(--ink); }
+
+.no-results {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-dim);
+}
+
+/* ---------- Category tiles (home) ---------- */
+.cat-tile {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.8rem 1.4rem;
+  height: 100%;
+  transition: all 0.22s ease;
+  display: block;
+}
+.cat-tile:hover {
+  border-color: var(--amber);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+}
+.cat-tile .cat-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--amber);
+  line-height: 1;
+}
+.cat-tile h4 { margin: 0.6rem 0 0.4rem; font-size: 1.15rem; }
+.cat-tile p { color: var(--text-dim); font-size: 0.88rem; margin: 0; }
+
+/* ---------- Footer ---------- */
+footer.site-footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.7);
+  padding: 3rem 0 1.5rem;
+  margin-top: 3rem;
+}
+footer.site-footer h5 {
+  color: var(--white);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+footer.site-footer a {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.88rem;
+  display: block;
+  margin-bottom: 0.55rem;
+  transition: color 0.2s ease;
+}
+footer.site-footer a:hover { color: var(--amber); }
+footer.site-footer .footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 2rem;
+  padding-top: 1.3rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: rgba(255,255,255,0.45);
+}
+footer.site-footer .brand {
+  color: var(--white);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+/* ---------- Static pages (about/contact/privacy) ---------- */
+.static-page { padding: 3rem 0; }
+.static-page h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 1rem; }
+.static-page h2 { font-size: 1.4rem; margin: 1.8rem 0 0.8rem; }
+.static-page p { color: var(--text-dim); line-height: 1.7; font-size: 1rem; }
+.static-page ul { color: var(--text-dim); line-height: 1.8; }
+
+.contact-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  box-shadow: var(--shadow-card);
+}
+
+.form-control:focus { border-color: var(--amber); box-shadow: 0 0 0 3px rgba(245,166,35,0.18); }
+
+/* ---------- Animations ---------- */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Media Queries ---------- */
+@media (max-width: 991.98px) {
+  .filter-bar { position: static; }
+  .hero { padding: 3rem 0 2.5rem; text-align: center; }
+  .hero p.lead { margin: 0 auto; }
+}
+
+@media (max-width: 767.98px) {
+  .section-pad { padding: 2.2rem 0; }
+  .job-card { padding: 1.1rem; }
+  .navbar-2026 .nav-link { padding: 0.6rem 0.5rem !important; }
+}
+
+@media (max-width: 575.98px) {
+  .hero h1 { font-size: 1.7rem; }
+  .search-panel { padding: 0.9rem; }
+  .cat-tile { padding: 1.4rem 1.1rem; }
+}

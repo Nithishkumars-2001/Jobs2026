@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Job Opportunity 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-2026">
+  <div class="container">
+    <a class="navbar-brand" href="home.html">Job Opportunity <span class="badge-year">2026</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/freshers-jobs.html">Freshers Jobs</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/2plus-years-jobs.html">2+ Years Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/5plus-years-jobs.html">5+ Years Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <span class="eyebrow">Get in touch</span>
+    <h1>We'd love to hear from you</h1>
+    <p class="lead">Questions, feedback, or spotted an outdated link? Let us know.</p>
+  </div>
+</header>
+
+<section class="static-page">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-7">
+        <div class="contact-card">
+          <h2 style="margin-top:0;">Send a message</h2>
+          <form id="contactForm">
+            <div class="mb-3">
+              <label class="form-label">Full Name</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Subject</label>
+              <select class="form-select">
+                <option>General Inquiry</option>
+                <option>Report a broken/expired link</option>
+                <option>Suggest a company to add</option>
+                <option>Partnership</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-amber">Send Message</button>
+            <p id="formNote" class="mt-3" style="font-size:0.85rem; color:var(--text-dim);"></p>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="contact-card">
+          <h2 style="margin-top:0;">Contact Details</h2>
+          <p><strong>Email:</strong><br><a href="mailto:support@jobopportunity2026.com" style="color:var(--teal);">support@jobopportunity2026.com</a></p>
+          <p><strong>Response time:</strong><br>We typically reply within 2–3 business days.</p>
+          <p><strong>Found an expired job link?</strong><br>Please tell us the company and role so we can update or remove it — since every listing routes to an official employer page, we rely on reports like yours to keep things accurate.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 col-md-4">
+        <div class="brand">Job Opportunity 2026</div>
+        <p style="margin-top:0.8rem; font-size:0.88rem;">Connecting IT talent with genuine opportunities directly from official company career pages.</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <h5>Quick Links</h5>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+      <div class="col-6 col-md-3">
+        <h5>Job Categories</h5>
+        <a href="pages/freshers-jobs.html">Freshers Jobs</a>
+        <a href="pages/2plus-years-jobs.html">2+ Years Experience</a>
+        <a href="pages/5plus-years-jobs.html">5+ Years Experience</a>
+      </div>
+      <div class="col-12 col-md-3">
+        <h5>Contact</h5>
+        <a href="mailto:support@jobopportunity2026.com">support@jobopportunity2026.com</a>
+        <a href="contact.html">Contact Form →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Job Opportunity 2026. All job listings link to official employer career pages.</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("formNote").textContent = "This is a demo form (no backend connected). Please email us directly at support@jobopportunity2026.com.";
+    this.reset();
+  });
+</script>
+</body>
+</html>
